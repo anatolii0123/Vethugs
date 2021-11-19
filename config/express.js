@@ -47,9 +47,6 @@ if (config.env === 'development') {
   // }));
 }
 
-// mount all routes on /api path
-app.use('/api', routes);
-
 console.log(`${__dirname}/build`)
 console.log(path.resolve('build/index.html'))
 
