@@ -14,18 +14,18 @@ Promise = require('bluebird'); // eslint-disable-line no-global-assign
 mongoose.Promise = Promise;
 
 // connect to mongo db
-const mongoUri = 'mongodb+srv://oilm:newpassword@trading.sbhir.mongodb.net/myFirstDatabase?retryWrites=true&w=majority';
-mongoose.connect(mongoUri);
-mongoose.connection.on('error', () => {
-  throw new Error(`unable to connect to database: ${mongoUri}`);
-});
+// const mongoUri = 'mongodb+srv://oilm:newpassword@trading.sbhir.mongodb.net/myFirstDatabase?retryWrites=true&w=majority';
+// mongoose.connect(mongoUri);
+// mongoose.connection.on('error', () => {
+//   throw new Error(`unable to connect to database: ${mongoUri}`);
+// });
 
 // print mongoose logs in dev env
-if (config.mongooseDebug) {
-  mongoose.set('debug', (collectionName, method, query, doc) => {
-    debug(`${collectionName}.${method}`, util.inspect(query, false, 20), doc);
-  });
-}
+// if (config.mongooseDebug) {
+//   mongoose.set('debug', (collectionName, method, query, doc) => {
+//     debug(`${collectionName}.${method}`, util.inspect(query, false, 20), doc);
+//   });
+// }
 
 // module.parent check is required to support mocha watch
 // src: https://github.com/mochajs/mocha/issues/1912
