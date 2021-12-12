@@ -3,7 +3,7 @@
  * License https://froala.com/wysiwyg-editor/terms/
  * Copyright 2014-2020 Froala Labs
  */
-@charset "UTF-8";
+
 .fr-clearfix::after {
   clear: both;
   display: block;
@@ -4794,7 +4794,7 @@ a {
   padding-left: 50px;
 }
 .u-form-vertical.u-form-spacing-49 {
-  margin-left: -49px;
+  margin-left: -39px;
   width: calc(100% +  49px);
 }
 .u-form-vertical.u-form-spacing-49 .u-form-group {
@@ -8413,8 +8413,11 @@ section.u-image,
 }
 .u-sheet {
   position: relative;
-  width: 100%;
+  width: 1140px;
   margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 @media (min-width: 1200px) {
   .u-sheet {
@@ -8656,31 +8659,31 @@ section.u-image,
   }
 }
 .u-valign-top {
-  justify-content: center;
+  justify-content: flex-start;
 }
 @media (min-width: 1200px) {
   .u-valign-top-xl {
-    justify-content: center;
+    justify-content: flex-start;
   }
 }
 @media (min-width: 992px) and (max-width: 1199px) {
   .u-valign-top-lg {
-    justify-content: center;
+    justify-content: flex-start;
   }
 }
 @media (min-width: 768px) and (max-width: 991px) {
   .u-valign-top-md {
-    justify-content: center;
+    justify-content: flex-start;
   }
 }
 @media (min-width: 576px) and (max-width: 767px) {
   .u-valign-top-sm {
-    justify-content: center;
+    justify-content: flex-start;
   }
 }
 @media (max-width: 575px) {
   .u-valign-top-xs {
-    justify-content: center;
+    justify-content: flex-start;
   }
 }
 .u-valign-bottom {
@@ -11707,7 +11710,7 @@ section.u-image,
   padding: 100px;
 }
 .u-gutter-98 .u-layout {
-  margin: -49px;
+  margin: -39px;
 }
 .u-gutter-98 .u-layout .u-layout-cell {
   border: 49px solid transparent;
@@ -16821,10 +16824,10 @@ div.u-video,
   color: inherit;
 }
 .u-nav-container > .u-nav > .u-nav-item > .u-nav-link {
-  padding: 10px 10px;
+  padding: 10px 5px;
 }
 .menu-collapse {
-  display: none;
+  /* display: none; */
   border: none;
   z-index: 1;
 }
@@ -16837,7 +16840,9 @@ div.u-video,
 .menu-collapse .u-nav-link svg {
   width: 1em;
   height: 1em;
-  vertical-align: top;
+  
+  vertical-align: -webkit-baseline-middle;
+  vertical-align: middle;
 }
 .menu-collapse .u-nav-link svg + svg {
   position: absolute;
@@ -34794,22 +34799,22 @@ a.u-link.u-text-hover-grey-90:hover {
 }
 
 .u-header .u-sheet-1 {
-  min-height: 112px;
+  min-height: 100px;
 }
 
 .u-header .u-image-1 {
-  width: 335px;
-  height: 81px;
+  width: auto;
+  height: auto;
   margin: 22px auto 0 0;
 }
 
 .u-header .u-logo-image-1 {
-  width: 100%;
-  height: 100%;
+  width: 200px;
+  height: auto;
 }
 
 .u-header .u-menu-1 {
-  margin: -49px 0 22px auto;
+  margin: -39px 0 22px auto;
 }
 
 .u-header .u-nav-1 {
@@ -34823,14 +34828,14 @@ a.u-link.u-text-hover-grey-90:hover {
 @media (max-width: 1199px) {
   .u-header .u-menu-1 {
     width: auto;
-    margin-top: -49px;
+    margin-top: -39px;
   }
 }
 
 
 @media (max-width: 575px) {
   .u-header .u-menu-1 {
-    margin-top: -56px;
+    margin-top: -39px;
     margin-right: -39px;
     margin-bottom: 34px;
   }
@@ -34875,8 +34880,6 @@ a.u-link.u-text-hover-grey-90:hover {
  /*begin-variables base-font-size*/ 
  html { font-size: 16px; }
  /*end-variables base-font-size*/
-
- /* Dropdown Button */
 .dropbtn {
   background-color: #000000;
   color: white;
